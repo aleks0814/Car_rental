@@ -1,0 +1,63 @@
+{% extends 'viewer/main.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<div class="header-bar">
+<h1>Cars</h1>
+  <a href="http://127.0.0.1:8000/employee/selectrental">&#8592;Go Back</a>
+</div>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+
+<body>
+<div>
+<table>
+    <tr>
+        <th>Model</th>
+        <th>Wypozyczalnia</th>
+        <th>Skrzynia biegow</th>
+        <th>Klimatyzacja</th>
+        <th>Cena za dzien</th>
+        <th>Dostepnosc</th>
+    </tr>
+    {% for item in data %}
+    <tr>
+        <td> {{ item }}</td>
+        <td> {{ item.rental.name }}</td>
+        <td> {{ item.transmission }}</td>
+        <td> {{ item.air_conditioning }}</td>
+        <td> {{ item.price_per_day }}</td>
+        <td> {{ item.avability }}</td>
+        <td>
+            <form action="{% url 'update_car' item.id %}">
+                <input type="submit" value="Car Update"/>
+            </form>
+        </td>
+        <td>
+            <form action="{% url 'delete_car' item.id %}">
+                <input type="submit" value="Car Delete"/>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+<form method="POST" action="{% url 'create_car' %}">{% csrf_token %}
+
+    <!-- form variable -->
+    {{ form.as_p }}
+    <br>
+    <input type="submit" value="Create a new one">
+</form>
+
+</body>
+</html>
+
+{% endblock content %}

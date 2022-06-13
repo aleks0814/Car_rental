@@ -1,0 +1,31 @@
+{% extends 'viewer/main.html' %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data update</title>
+</head>
+<body>
+
+<div class="header-bar">
+    <h1>Update personal data</h1>
+    <a href="http://127.0.0.1:8000/clientprofil/">&#8592;Go Back</a>
+</div>
+<style>
+.card-body {
+            padding: 20px;
+        }
+</style>
+<div class="card-body">
+    <form method="post">
+        {% csrf_token %}
+        <table>{{ form }}</table>
+        <div style="font color: #fff">  . </div><br>
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+</div>
+
+{% endblock %}
+</body>
+</html>

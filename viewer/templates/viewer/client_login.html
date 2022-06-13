@@ -1,0 +1,17 @@
+{% extends 'viewer/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+<h1>Client login</h1>
+  <a href="http://127.0.0.1:8000/home/">&#8592;Go Back</a>
+</div>
+
+<div class="card-body">
+  <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="Submit" value="Login">
+  </form>
+  <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+</div>
+{% endblock content %}

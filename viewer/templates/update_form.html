@@ -1,0 +1,19 @@
+
+<html>
+    <head>
+        <title>UpdateView</title>
+
+    </head>
+
+    <body>
+      <a href="{% url 'selectrental' %}">Go Back</a>
+<form method="POST">{% csrf_token %}
+
+<!-- form variable -->
+ {{ form.as_p }}
+
+  <input type="submit" name="sumbit" value="Update" >
+</form>
+    </body>
+
+</html>

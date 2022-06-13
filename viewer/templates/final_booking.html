@@ -1,0 +1,33 @@
+{% extends 'viewer/main.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="header-bar">
+<h1>Booking confirmation</h1>
+  <a href="http://127.0.0.1:8000/home">&#8592;Back to home</a>
+</div>
+
+<style>
+.card-body {
+    padding: 20px;
+        }
+</style>
+
+<body>
+<div class=card-body>
+<span class="filter-label">
+    
+<p> {{ user }}, you've succesfully booked the car : {{ car }} !</p>
+<p> Your booking has number {{ booking_id }}</p>
+<p> We are going to send the confirmation by e-mail !</p>
+<br>
+<br>
+<a href="http://127.0.0.1:8000/home"><button>Back to home page</button></a>
+<a href="http://127.0.0.1:8000/book"><button>Book another one !</button></a>
+</span>
+</div>
+</body>
+</html>
+{% endblock content %}

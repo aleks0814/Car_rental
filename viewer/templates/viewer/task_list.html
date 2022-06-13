@@ -1,0 +1,79 @@
+{% extends 'viewer/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <div>
+        <h1>Hello {{request.user|title}}</h1>
+        <a href="http://127.0.0.1:8000/home/">&#8592;Go Back</a>
+        <div style="font color: #11203e">  </div>
+        <h3 style="margin:0"> You have <i> {{count}} </i> message{{ count|pluralize:"s" }} from your colleague. </h3>
+    </div>
+    {% if request.user.is_authenticated %}
+    <a href='{% url "logout" %}'>Logout</a>
+    {% else %}
+    <a href='{% url "login" %}'>login</a>
+    {% endif %}
+</div><br>
+
+<table style="width:100%">
+    {% for data in weather%}
+    <tr>
+    {% for entity in data %}
+    <td>{{entity}}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+{% if request.user.is_authenticated %}
+    <p> {{city}}</p>
+    <p> {{temp}}</p>
+    <p> {{conditions}}</p>
+<!--    <p>{{request.user}}</p>-->
+    <a href='{% url "logout" %}'>Logout</a>
+{% else %}
+    <a href='{% url "login" %}'>login</a>
+{% endif %}
+
+<hr style="card-body">
+<div>Worker menu:</div><br>
+<a href="{% url 'selectrental' %}"> Our rentals </a>&nbsp
+<a href="{% url 'bookinglist' %}"> Bookings </a>&nbsp
+<a href="{% url 'bookacar' %}"> Create booking </a>
+<p><br></p>
+<div>/!\ Manager/admin access only:</div><br>
+<a href="http://127.0.0.1:8000/create/carbrand">Car brand settings</a>&nbsp
+<a href="http://127.0.0.1:8000/create/carcategory">Car category settings</a>&nbsp
+<a href="http://127.0.0.1:8000/create/carmodel">Car model settings</a>&nbsp
+<a href="http://127.0.0.1:8000/create/rental">Rental settings</a>&nbsp
+<a href="http://127.0.0.1:8000/create/car">Car settings</a>&nbsp
+
+
+<div id="search-add-wrapper">
+    <a id="add-link" href="{% url 'task-create' %}">&#x2b;</a>
+</div>
+
+<div class="task-items-wrapper">
+    {% for task in tasks %}
+        <div class="task-wrapper">
+            {% if task.complete %}
+            <div class="task-title">
+                <div class="task-complete-icon"></div>
+                <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i>
+            </div>
+                <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
+            {% else %}
+            <div class="task-title">
+                <div class="task-incomplete-icon"></div>
+                <a href="{% url 'task-update' task.id %}">{{task}}</a>
+            </div>
+            <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
+            {% endif %}
+        </div>
+    {% empty %}
+    <h3>No items in list</h3>
+    {% endfor %}
+</div>
+
+{% endblock content %}
+

@@ -1,0 +1,11 @@
+{% extends 'viewer/main.html' %}
+{% block content %}
+
+<h3>Task form </h3>
+<a href="{% url 'profil' %}">Go back</a>
+<form method="POST" action="">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="Submit" value="Submit">
+</form>
+{% endblock content %}

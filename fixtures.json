@@ -1,0 +1,553 @@
+[
+  {
+    "model": "viewer.carbrand",
+    "pk": 1,
+    "fields": {
+      "name": "Nissan"
+    }
+  },
+  {
+    "model": "viewer.carbrand",
+    "pk": 2,
+    "fields": {
+      "name": "Mercedes"
+    }
+  },
+  {
+    "model": "viewer.carbrand",
+    "pk": 3,
+    "fields": {
+      "name": "Volkswagen"
+    }
+  },
+  {
+    "model": "viewer.carcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Economy"
+    }
+  },
+  {
+    "model": "viewer.carcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Suv"
+    }
+  },
+  {
+    "model": "viewer.carcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Standard"
+    }
+  },
+  {
+    "model": "viewer.carcategory",
+    "pk": 4,
+    "fields": {
+      "name": "Sport"
+    }
+  },
+  {
+    "model": "viewer.carcategory",
+    "pk": 5,
+    "fields": {
+      "name": "Compact"
+    }
+  },
+  {
+    "model": "viewer.carmodel",
+    "pk": 3,
+    "fields": {
+      "car_brand": 1,
+      "car_category": 3,
+      "name": "Almera",
+      "capacity": 4,
+      "picture": "viewer/picture/nissan-almera-recall-airbag.jpg"
+    }
+  },
+  {
+    "model": "viewer.carmodel",
+    "pk": 4,
+    "fields": {
+      "car_brand": 2,
+      "car_category": 4,
+      "name": "SL Roadster",
+      "capacity": 4,
+      "picture": "viewer/picture/roadster.jpg"
+    }
+  },
+  {
+    "model": "viewer.carmodel",
+    "pk": 5,
+    "fields": {
+      "car_brand": 3,
+      "car_category": 1,
+      "name": "Golf",
+      "capacity": 4,
+      "picture": "viewer/picture/golf.jpg"
+    }
+  },
+  {
+    "model": "viewer.carmodel",
+    "pk": 6,
+    "fields": {
+      "car_brand": 3,
+      "car_category": 1,
+      "name": "Polo",
+      "capacity": 4,
+      "picture": "viewer/picture/polo.jpg"
+    }
+  },
+  {
+    "model": "viewer.carmodel",
+    "pk": 7,
+    "fields": {
+      "car_brand": 1,
+      "car_category": 5,
+      "name": "Leaf",
+      "capacity": 4,
+      "picture": "viewer/picture/nissan-leaf-cennik-2022-otwarcie.jpg"
+    }
+  },
+  {
+    "model": "viewer.carmodel",
+    "pk": 8,
+    "fields": {
+      "car_brand": 1,
+      "car_category": 1,
+      "name": "Micra",
+      "capacity": 5,
+      "picture": "viewer/picture/nissan-micra.jpg"
+    }
+  },
+  {
+    "model": "viewer.carmodel",
+    "pk": 9,
+    "fields": {
+      "car_brand": 2,
+      "car_category": 3,
+      "name": "C Klasa",
+      "capacity": 4,
+      "picture": "viewer/picture/mercedes-klasa-c-w205.jpg"
+    }
+  },
+  {
+    "model": "viewer.carmodel",
+    "pk": 10,
+    "fields": {
+      "car_brand": 3,
+      "car_category": 2,
+      "name": "Tiguan",
+      "capacity": 5,
+      "picture": "viewer/picture/VOLKSWAGEN-Tiguan.webp"
+    }
+  },
+  {
+    "model": "viewer.rental",
+    "pk": 1,
+    "fields": {
+      "name": "Pary\u017c",
+      "address": "Champ de Mars, 5 Av. Anatole France, 75007 Paris, Francja",
+      "number_of_cars": 5
+    }
+  },
+  {
+    "model": "viewer.rental",
+    "pk": 2,
+    "fields": {
+      "name": "Rzym",
+      "address": "Piazza del Colosseo, 1, 00184 Roma RM, W\u0142ochy",
+      "number_of_cars": 8
+    }
+  },
+  {
+    "model": "viewer.rental",
+    "pk": 3,
+    "fields": {
+      "name": "Londyn",
+      "address": "Elizabeth Tower - Houses of Parliament, Westminster, London SW1A 0AA",
+      "number_of_cars": 4
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 5,
+    "fields": {
+      "car_model": 5,
+      "rental": 3,
+      "transmission": "Manualna",
+      "air_conditioning": false,
+      "price_per_day": 102.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 6,
+    "fields": {
+      "car_model": 3,
+      "rental": 1,
+      "transmission": "Manualna",
+      "air_conditioning": true,
+      "price_per_day": 120.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 7,
+    "fields": {
+      "car_model": 4,
+      "rental": 1,
+      "transmission": "Automat",
+      "air_conditioning": true,
+      "price_per_day": 200.0,
+      "avability": false
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 8,
+    "fields": {
+      "car_model": 7,
+      "rental": 3,
+      "transmission": "Automat",
+      "air_conditioning": true,
+      "price_per_day": 140.0,
+      "avability": false
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 9,
+    "fields": {
+      "car_model": 9,
+      "rental": 3,
+      "transmission": "Automat",
+      "air_conditioning": true,
+      "price_per_day": 150.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 10,
+    "fields": {
+      "car_model": 6,
+      "rental": 2,
+      "transmission": "Manualna",
+      "air_conditioning": false,
+      "price_per_day": 90.0,
+      "avability": false
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 11,
+    "fields": {
+      "car_model": 8,
+      "rental": 2,
+      "transmission": "Manualna",
+      "air_conditioning": true,
+      "price_per_day": 100.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 12,
+    "fields": {
+      "car_model": 3,
+      "rental": 2,
+      "transmission": "Automat",
+      "air_conditioning": true,
+      "price_per_day": 190.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 14,
+    "fields": {
+      "car_model": 7,
+      "rental": 2,
+      "transmission": "Automat",
+      "air_conditioning": true,
+      "price_per_day": 140.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 15,
+    "fields": {
+      "car_model": 8,
+      "rental": 2,
+      "transmission": "Manualna",
+      "air_conditioning": true,
+      "price_per_day": 100.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 17,
+    "fields": {
+      "car_model": 8,
+      "rental": 2,
+      "transmission": "Manualna",
+      "air_conditioning": true,
+      "price_per_day": 100.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 18,
+    "fields": {
+      "car_model": 8,
+      "rental": 2,
+      "transmission": "Manualna",
+      "air_conditioning": true,
+      "price_per_day": 100.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 27,
+    "fields": {
+      "car_model": 8,
+      "rental": 3,
+      "transmission": "Manualna",
+      "air_conditioning": true,
+      "price_per_day": 100.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 29,
+    "fields": {
+      "car_model": 4,
+      "rental": 3,
+      "transmission": "Automat",
+      "air_conditioning": true,
+      "price_per_day": 200.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 30,
+    "fields": {
+      "car_model": 6,
+      "rental": 1,
+      "transmission": "Manualna",
+      "air_conditioning": false,
+      "price_per_day": 90.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 31,
+    "fields": {
+      "car_model": 9,
+      "rental": 2,
+      "transmission": "Automat",
+      "air_conditioning": true,
+      "price_per_day": 2000.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.car",
+    "pk": 32,
+    "fields": {
+      "car_model": 10,
+      "rental": 1,
+      "transmission": "Manualna",
+      "air_conditioning": true,
+      "price_per_day": 220.0,
+      "avability": true
+    }
+  },
+  {
+    "model": "viewer.client",
+    "pk": 1,
+    "fields": {
+      "name": "Hubert",
+      "surname": "Kie\u0142kowski",
+      "email": "hubert.kielkowski@gmail.com",
+      "login": "hubert.kielkowski@gmail.com",
+      "password": "admin123",
+      "document_id": "ABL456789"
+    }
+  },
+  {
+    "model": "viewer.client",
+    "pk": 2,
+    "fields": {
+      "name": "Hubert",
+      "surname": "Hubert",
+      "email": "hubert.kielkowski@gmail.com",
+      "login": "hubert.hubert",
+      "password": "hubert.hubert",
+      "document_id": "1234"
+    }
+  },
+  {
+    "model": "viewer.booking",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "car": 11,
+      "approved": true,
+      "date_of_rental": "2022-05-02",
+      "date_of_return": "2022-05-06",
+      "number_of_days": 1,
+      "days_to_return": 1,
+      "penalties": false,
+      "amount_of_penalties": 1.0,
+      "insurance": false,
+      "total_cost": 1.0
+    }
+  },
+  {
+    "model": "viewer.booking",
+    "pk": 4,
+    "fields": {
+      "user": 1,
+      "car": 15,
+      "approved": true,
+      "date_of_rental": "2022-05-02",
+      "date_of_return": "2022-05-06",
+      "number_of_days": 1,
+      "days_to_return": 1,
+      "penalties": false,
+      "amount_of_penalties": 1.0,
+      "insurance": false,
+      "total_cost": 1.0
+    }
+  },
+  {
+    "model": "viewer.booking",
+    "pk": 5,
+    "fields": {
+      "user": 1,
+      "car": null,
+      "approved": true,
+      "date_of_rental": "2022-05-02",
+      "date_of_return": "2022-05-06",
+      "number_of_days": 1,
+      "days_to_return": 1,
+      "penalties": false,
+      "amount_of_penalties": 1.0,
+      "insurance": false,
+      "total_cost": 1.0
+    }
+  },
+  {
+    "model": "viewer.booking",
+    "pk": 6,
+    "fields": {
+      "user": 1,
+      "car": 17,
+      "approved": true,
+      "date_of_rental": "2022-05-02",
+      "date_of_return": "2022-05-06",
+      "number_of_days": 1,
+      "days_to_return": 1,
+      "penalties": false,
+      "amount_of_penalties": 1.0,
+      "insurance": false,
+      "total_cost": 1.0
+    }
+  },
+  {
+    "model": "viewer.booking",
+    "pk": 7,
+    "fields": {
+      "user": 1,
+      "car": 18,
+      "approved": true,
+      "date_of_rental": "2022-05-02",
+      "date_of_return": "2022-05-06",
+      "number_of_days": 1,
+      "days_to_return": 1,
+      "penalties": false,
+      "amount_of_penalties": 1.0,
+      "insurance": false,
+      "total_cost": 1.0
+    }
+  },
+  {
+    "model": "viewer.booking",
+    "pk": 8,
+    "fields": {
+      "user": 1,
+      "car": 27,
+      "approved": true,
+      "date_of_rental": "2022-05-02",
+      "date_of_return": "2022-05-06",
+      "number_of_days": 1,
+      "days_to_return": 1,
+      "penalties": false,
+      "amount_of_penalties": 1.0,
+      "insurance": false,
+      "total_cost": 1.0
+    }
+  },
+  {
+    "model": "viewer.booking",
+    "pk": 9,
+    "fields": {
+      "user": 1,
+      "car": null,
+      "approved": true,
+      "date_of_rental": "2022-05-02",
+      "date_of_return": "2022-05-06",
+      "number_of_days": 1,
+      "days_to_return": 1,
+      "penalties": false,
+      "amount_of_penalties": 1.0,
+      "insurance": false,
+      "total_cost": 1.0
+    }
+  },
+  {
+    "model": "viewer.task",
+    "pk": 1,
+    "fields": {
+      "user": null,
+      "title": "order bookings",
+      "description": "filter and check all bookings",
+      "complete": false,
+      "created": "2022-06-06T05:26:45.530Z"
+    }
+  },
+  {
+    "model": "viewer.task",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "title": "filter and check bookings",
+      "description": "Filter and check all bookings",
+      "complete": false,
+      "created": "2022-06-06T05:27:15.305Z"
+    }
+  },
+  {
+    "model": "viewer.task",
+    "pk": 3,
+    "fields": {
+      "user": 2,
+      "title": "red car",
+      "description": "check if customer brought back a red car",
+      "complete": false,
+      "created": "2022-06-06T05:27:51.456Z"
+    }
+  }
+]

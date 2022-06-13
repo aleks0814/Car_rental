@@ -1,0 +1,25 @@
+{% extends 'viewer/main.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking list</title>
+</head>
+<div class="header-bar">
+<h1>Worker console</h1>
+  <a href="http://127.0.0.1:8000/tasks">&#8592;Go Back</a>
+</div>
+<body>
+<table style ="margin-left: auto; margin-right: auto;padding: 2px; border-spacing: 20px; margin-left:auto; margin-right:auto;">
+    <tr style="border-top: 2px solid #999; border-bottom: 2px solid #999;">
+        <th style="width:600px; border-bottom: 2px solid #999;">Booking description</th>
+    </tr>
+    {% for booking in booking_list %}
+    <tr>
+        <td style="text-align:center; border-bottom: 1px solid #999;"> {{ booking }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+{% endblock content %}

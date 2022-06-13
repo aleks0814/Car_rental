@@ -1,0 +1,39 @@
+{% extends 'viewer/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+<h1>Register</h1>
+  <a href="http://127.0.0.1:8000/home/">&#8592;Go Back</a>
+</div>
+
+<div class="card-body">
+  <form method="POST">
+    {% csrf_token %}
+    <div> Please type your email as username and password to create your account </div>
+    <br>
+    Please remember: <br>
+    <div>
+    Your password can’t be too similar to your other personal information.<br>
+    Your password must contain at least 8 characters.<br>
+    Your password can’t be a commonly used password.<br>
+    Your password can’t be entirely numeric.<br>
+    </div>
+
+    <label> {{form.username.label}} </label>
+    {{form.username}}
+     <label> {{form.first_name.label}} </label>
+    {{form.first_name}}
+    <label> {{form.last_name.label}} </label>
+    {{form.last_name}}
+    <label> {{form.email.label}} </label>
+    {{form.email}}
+    <label> {{form.password1.label}} </label>
+    {{form.password1}}
+    <label> {{form.password2.label}} </label>
+    {{form.password2}}<br>
+    <input style="margin-top:10px ;" class="button" type="Submit" value="Register">
+  </form>
+  <p>Already have an account? <a href="http://127.0.0.1:8000/loginclient/">Login</a></p>
+</div>
+
+{% endblock content %}

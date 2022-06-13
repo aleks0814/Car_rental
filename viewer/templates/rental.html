@@ -1,0 +1,36 @@
+{% extends 'viewer/main.html' %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<table style="display: inline-block">
+    <tr>
+        <th>Nazwa</th>
+        <th>Adres</th>
+        <th>Liczba aut</th>
+    </tr>
+    {% for item in data %}
+    <tr>
+        <td> {{ item.name }} </td>
+        <td> {{ item.address }} </td>
+        <td> {{ item.number_of_cars }} </td>
+
+
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
+{% endblock content %}
