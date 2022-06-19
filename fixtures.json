@@ -148,7 +148,7 @@
     "pk": 1,
     "fields": {
       "name": "Pary\u017c",
-      "address": "Champ de Mars, 5 Av. Anatole France, 75007 Paris, Francja",
+      "address": "Champ de Mars, 5 Av. Anatole France, 75007 Paris, France",
       "number_of_cars": 5
     }
   },
@@ -157,7 +157,7 @@
     "pk": 2,
     "fields": {
       "name": "Rzym",
-      "address": "Piazza del Colosseo, 1, 00184 Roma RM, W\u0142ochy",
+      "address": "Piazza del Colosseo, 1, 00184 Roma RM, Italy",
       "number_of_cars": 8
     }
   },
